@@ -25,22 +25,8 @@ head(d)
   #each team (use the teamID column) aggregated by player
 
 da <- d[, c("teamID", "HR", "nameLast", "nameFirst")]
-row.names(da) = da$birthYear
-
 dab <- data.frame(r1=names(da$birthYear), t(da)
-                  
-                  
-                  unique(d$birthYear)  
-  
-  
-db = spread(data = d, key = teamID, value = HR)
-db #not shaven down 
-dc = spread(data = da, key = teamID, value = HR)
-dd = dc[dc$birthYear, ]
-dd #not successful
-
-dhr = spread(data = d, key = HR, value = birthYear)
-dhr
+dac <- spread(data = dab, key = teamID, value = HR)                  
 
 #2) Subset the data for the Houston Astros (HOU). Using the gather() function, create a new data frame that has 3 columns:
   # (1) playerID, (2) variable containing (AB, R, H, 2B, 3B) and (3) column with the corresponding values for the stats.
@@ -99,6 +85,16 @@ print("Not to be")
 #two or more conditions
 #8) create an 'if else' statement that returns (in order of preference) your four ideal pizza toppings
 
+pepercini = 1
+peperoni = 2
+sausage = 3
+cheese = 4
+
+if(pepercini = 1 & peperoni = 2) {
+  print("Pepercini, peperoni, sausage, cheese")
+} else if(pepercini = 3 & peperoni =4){
+print("Sausage, cheese, pepercini, peperoni")
+}
 
 
 #two or more conditions joined (new content)
